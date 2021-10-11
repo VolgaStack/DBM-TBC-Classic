@@ -52,18 +52,18 @@ mod.vb.striderCount = 1
 mod.vb.elementalCount = 1
 local elementals = {}
 
-function mod:StriderSpawn()
+local function StriderSpawn(self)
 	self.vb.striderCount = self.vb.striderCount + 1
-	timerStrider:Start(nil, tostring(self.vb.striderCount))
 	warnStrider:Schedule(57, tostring(self.vb.striderCount))
-	self:ScheduleMethod(63, "StriderSpawn")
+	timerStrider:Start(63, tostring(self.vb.striderCount))
+	self:Schedule(63, StriderSpawn, self)
 end
 
-function mod:NagaSpawn()
-	self.vb.nagaCount = self.vb.nagaCount + 1
-	timerNaga:Start(nil, tostring(self.vb.nagaCount))
+local function NagaSpawn(self)
 	warnNaga:Schedule(42.5, tostring(self.vb.nagaCount))
-	self:ScheduleMethod(47.5, "NagaSpawn")
+	self.vb.nagaCount = self.vb.nagaCount + 1
+	timerNaga:Start(47., tostring(self.vb.nagaCount))
+	self:Schedule(47.5, NagaSpawn, self)
 end
 
 function mod:OnCombatStart(delay)
@@ -178,12 +178,12 @@ do
 			warnPhase2:Show()
 			timerNaga:Start(nil, self.vb.nagaCount)
 			warnNaga:Schedule(42.5, self.vb.elementalCount)
-			self:ScheduleMethod(47.5, "NagaSpawn")
+			self:Schedule(47.5, NagaSpawn, self)
 			timerElementalCD:Start(nil, self.vb.elementalCount)
 			warnElemental:Schedule(45, self.vb.elementalCount)
 			timerStrider:Start(nil, self.vb.striderCount)
 			warnStrider:Schedule(57, self.vb.striderCount)
-			self:ScheduleMethod(63, "StriderSpawn")
+			self:Schedule(63, StriderSpawn, self)
 		elseif msg == "Phase3" and self.vb.phase < 3 then
 			self:SetStage(3)
 			warnPhase3:Show()
@@ -193,8 +193,8 @@ do
 			warnElemental:Cancel()
 			timerStrider:Cancel()
 			warnStrider:Cancel()
-			self:UnscheduleMethod("NagaSpawn")
-			self:UnscheduleMethod("StriderSpawn")
+			self:Unschedule(NagaSpawn)
+			self:Unschedule(StriderSpawn)
 --		elseif msg == "LootMsg" and playerName then
 			--[[playerName = DBM:GetUnitFullName(playerName) or playerName
 			if self:AntiSpam(2, playerName) then
