@@ -105,7 +105,7 @@ function mod:SPELL_AURA_APPLIED(args)
 	elseif args:IsSpellID(38575, 360327) and args:IsPlayer() and self:AntiSpam() then
 		specWarnToxic:Show()
 		specWarnToxic:Play("runaway")
-	elseif spellId == 38511 then
+	elseif args.spellId == 38511 then
 		if self.Options.MCIcon then
 			self:SetIcon(args.destName, self.vb.mcIcon)
 		end
@@ -129,7 +129,7 @@ function mod:SPELL_AURA_REMOVED(args)
 		if self.Options.LootIcon then
 			self:SetIcon(args.destName, 0)
 		end
-	elseif spellId == 38511 then
+	elseif args.spellId == 38511 then
 		if self.Options.MCIcon then
 			self:SetIcon(args.destName, 0)
 		end
