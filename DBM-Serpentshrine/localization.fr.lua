@@ -9,7 +9,11 @@ local L
 -----------------------
 --  The Lurker Below --
 -----------------------
---L = DBM:GetModLocalization("LurkerBelow")
+L = DBM:GetModLocalization("LurkerBelow")
+
+L:SetGeneralLocalization({
+	name = "Le Rôdeur d'En bas"
+})
 
 --------------------------
 --  Leotheras the Blind --
@@ -31,8 +35,8 @@ local L
 -----------------
 L = DBM:GetModLocalization("Vashj")
 
-L:SetMiscLocalization{
+L:SetMiscLocalization({
 	DBM_VASHJ_YELL_PHASE2	= "L'heure est venue ! N'épargnez personne !",
 	DBM_VASHJ_YELL_PHASE3	= "Il faudrait peut-être vous mettre à l'abri.",
 	LootMsg					= "([^%s]+).*Hitem:(%d+)"
-}
+})
