@@ -210,6 +210,7 @@ globals = {
 	"GetDungeonInfo",
 	"GetExpansionLevel",
 	"GetGameTime",
+	"GetGossipOptions",
 	"GetGuildInfo",
 	"GetGuildRosterInfo",
 	"GetGuildRosterShowOffline",
