@@ -33,7 +33,7 @@ function mod:GOSSIP_SHOW()
 	if not GetRealZoneText() == L.HyjalZoneName then return end
 	local target = UnitName("target")
 	if target == L.Thrall or target == L.Jaina then
-		local table = C_GossipInfo and C_GossipInfo.GetOptions()
+		local table = C_GossipInfo and C_GossipInfo.GetOptions and C_GossipInfo.GetOptions()
 		local selection
 		if table and table[1] and table[1].name then
 			selection = table[1].name
