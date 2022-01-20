@@ -69,6 +69,10 @@ function mod:SPELL_AURA_APPLIED(args)
 		if self.Options.FAIcons then
 			self:SetSortedIcon(1, args.destName, 1)
 		end
+		--In case no UNIT_SPELLCAST_SUCCEEDED event caught
+		if self:AntiSpam(3, 40869) then
+			timerFACD:Start()
+		end
 	end
 end
 
