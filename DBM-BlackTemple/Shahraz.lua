@@ -50,7 +50,7 @@ function mod:OnCombatStart(delay)
 	timerFACD:Start(24.4-delay)
 	if not self:IsTrivial() then
 		self:RegisterShortTermEvents(
-			"UNIT_HEALTH boss1"
+			"UNIT_HEALTH"
 		)
 	end
 end
