@@ -60,7 +60,6 @@ globals = {
 	"tremove",
 
 	-- WoW
-	-- WoW
 	"ALL",
 	"ALWAYS",
 	"BNET_CLIENT_WOW",
@@ -130,6 +129,7 @@ globals = {
 	"TOAST_DURATION_LONG",
 	"WOW_PROJECT_ID",
 	"WOW_PROJECT_BURNING_CRUSADE_CLASSIC",
+	"WOW_PROJECT_MAINLINE",
 	"YES",
 
 	"BackdropTemplateMixin",
