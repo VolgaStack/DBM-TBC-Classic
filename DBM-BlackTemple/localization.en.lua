@@ -145,7 +145,6 @@ L:SetOptionLocalization{
 	North		= "Star is left/west, circle is right/east, diamond is up/north",--Default
 	South		= "Star is left/west, circle is right/east, diamond is down/south",
 	None		= "Arrows will not be shown, Infoframe will show numbers instead of directions"
-})
 }
 
 ----------------------
