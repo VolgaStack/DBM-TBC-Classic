@@ -58,13 +58,13 @@ do
 		twipe(sortedLines)
 		for i=1, #FATargets do
 			local name = FATargets[i]
-			if self.vb.FABehavior ~= "None" then
-				if icon == 1 then
+			if mod.vb.FABehavior ~= "None" then
+				if i == 1 then
 					addLine(DBM_COMMON_L.LEFT, name)
-				elseif icon == 2 then
+				elseif i == 2 then
 					addLine(DBM_COMMON_L.RIGHT, name)
 				else
-					if self.vb.FABehavior == "North" then
+					if mod.vb.FABehavior == "North" then
 						addLine(DBM_COMMON_L.NORTH, name)
 					else
 						addLine(DBM_COMMON_L.SOUTH, name)
