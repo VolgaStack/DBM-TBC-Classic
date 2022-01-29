@@ -166,7 +166,7 @@ L:SetWarningLocalization{
 }
 
 L:SetOptionLocalization{
-	Immune			= "玛兰德 - %s 免疫15秒"
+	Immune			= "当玛兰德法术和物理近战免疫显示警报"
 }
 
 L:SetMiscLocalization{
