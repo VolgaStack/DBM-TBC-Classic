@@ -38,7 +38,7 @@ L:SetTimerLocalization{
 L:SetOptionLocalization{
 	WarnPhase		= "为下一次阶段显示警报",
 	TimerPhase		= "为下一次阶段显示计时器",
-	KiteIcon		= "为注视的目标设置标记"
+	KiteIcon		= "为凝视的目标设置标记"
 }
 
 L:SetMiscLocalization{
