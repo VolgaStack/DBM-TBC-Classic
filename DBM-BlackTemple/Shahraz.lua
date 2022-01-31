@@ -220,8 +220,11 @@ do
 	--Cluttering comms for UNIT events because of nochanges is fun.
 	function mod:OnSync(msg, spellId)
 		if msg == "Prismatic" and spellId and self:IsInCombat() then
-			local spellName = DBM:GetSpellInfo(tonumber(spellId))
-			timerAura:Start(spellName)
+			spellId = tonumber(spellId)
+			if type(spellId) == "number" then
+				local spellName = DBM:GetSpellInfo()
+				timerAura:Start(spellName)
+			end
 		elseif msg == "North" or msg == "South" or msg == "None" then
 			self:Schedule(3, UpdateRLPreference, self, msg)
 		end
