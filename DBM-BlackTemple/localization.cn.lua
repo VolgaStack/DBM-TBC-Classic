@@ -85,11 +85,11 @@ L:SetGeneralLocalization{
 }
 
 L:SetTimerLocalization{
-	TimerVengefulSpirit		= "死亡之影 : %s"
+	TimerVengefulSpirit		= "灵魂 : %s"
 }
 
 L:SetOptionLocalization{
-	TimerVengefulSpirit		= "计时条：死亡之影"
+	TimerVengefulSpirit		= "计时条：灵魂剩余时间"
 }
 
 ----------------------------
