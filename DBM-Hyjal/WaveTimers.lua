@@ -50,7 +50,7 @@ function mod:GOSSIP_SHOW()
 			elseif selection == L.KazrogalGossip then
 				boss = 3
 				self:SendSync("boss", 3)
-			elseif selection == L.AzgalorGossip then
+			elseif selection == L.AzgalorGossip or selection == L.AzgalorGossipF then
 				boss = 4
 				self:SendSync("boss", 4)
 			end

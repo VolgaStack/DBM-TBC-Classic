@@ -84,7 +84,7 @@ L:SetMiscLocalization{
 	AnetheronGossip	= "아키몬드가 어떤 군대를 보내던 우리는 준비가 되어 있습니다, 프라우드무어 님.",
 	KazrogalGossip	= "당신과 함께 하겠습니다, 대족장님.",
 	AzgalorGossip	= "두려워할 것은 아무것도 없습니다.",
-	AzgalorGossip_Female 	= "두려워할 것은 아무것도 없어요.",
+	AzgalorGossipF 	= "두려워할 것은 아무것도 없어요.",
 	Ghoul			= "구울",
 	Abomination		= "누더기골렘",
 	Necromancer		= "강령술사",
