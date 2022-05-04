@@ -21,7 +21,7 @@ L:SetOptionLocalization{
 	ShowFrame			= "Показывать фрейм Призрачного мира",
 	FrameClassColor		= "Использовать цвета классов в фрейме Призрачного мира",
 	FrameUpwards		= "расширять фрейм Призрачного мира вверх",
-	FrameLocked			= "Закрепить фрейм Призрачного мира на месте"
+	FrameLocked			= "Закрепить фрейм Призрачного мира на месте",
 	RangeFrame			= DBM_CORE_L.AUTO_RANGE_OPTION_TEXT:format(10, 46021)
 }
 
@@ -153,10 +153,10 @@ L:SetGeneralLocalization{
 }
 
 L:SetWarningLocalization{
-	WarnDarkOrb		= "Dark Orbs Spawned",--Translate
-	WarnBlueOrb		= "Dragon Orb activated",--Translate
-	SpecWarnDarkOrb	= "Dark Orbs Spawned!",--Translate
-	SpecWarnBlueOrb	= "Dragon Orbs Activated!"--Translate
+	WarnDarkOrb		= "Появляется темная сфера",
+	WarnBlueOrb		= "Сфера Калесгоса активна",
+	SpecWarnDarkOrb	= "Появляется темная сфера!",
+	SpecWarnBlueOrb	= "Сфера Калесгоса активна!"
 }
 
 L:SetTimerLocalization{
